@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_color">#ff60acff</color>
+    <color name="secondary_color">#ffa0bdff</color>
+    <color name="header">#ffccccff</color>
+    <color name="white">#ffffffff</color>
+    <color name="gray">#ff888888</color>
+    <color name="dark_gray">#ff333333</color>
+    <color name="black">#ff000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_blue">#66333388</color>
+
+    <color name="orange">#ffffaa66</color>
+    <color name="magenta">#ffff66aa</color>
+    <color name="purple">#ffaa66ff</color>
+</resources>

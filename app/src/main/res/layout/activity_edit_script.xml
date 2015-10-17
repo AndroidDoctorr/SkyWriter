@@ -1,0 +1,385 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.andrewtorr.skywriter.ScriptEditActivity"
+    android:orientation="vertical"
+    android:background="@color/main_color">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="36dp"
+        android:id="@+id/script_title"
+        android:background="@drawable/rounded_blue"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="Title"
+        android:textSize="14sp"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="36dp"
+        android:id="@+id/script_title_edit"
+        android:background="@drawable/rounded_white"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:hint="Title"
+        android:visibility="invisible"
+        android:textSize="16sp"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@+id/save_title"
+        android:layout_toStartOf="@+id/save_title"
+        android:layout_toRightOf="@+id/cancel_title"
+        android:layout_toEndOf="@+id/cancel_title"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/cancel_title"
+        android:src="@mipmap/ic_close_white_36dp"
+        app:rippleColor="@color/magenta"
+        app:backgroundTint="@color/purple"
+        app:elevation="6dp"
+        app:borderWidth="0dp"
+        android:visibility="invisible"
+        android:layout_margin="10dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/save_title"
+        android:src="@mipmap/ic_check_white_36dp"
+        app:rippleColor="@color/magenta"
+        app:backgroundTint="@color/purple"
+        app:elevation="6dp"
+        app:borderWidth="0dp"
+        android:visibility="invisible"
+        android:layout_margin="10dp" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/script_title"
+        android:layout_above="@+id/save_button"
+        android:id="@+id/line_list"
+        android:layout_margin="5dp"
+        android:background="@drawable/rounded_white" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/save_button"
+        android:src="@mipmap/ic_cloud_upload_white_48dp"
+        app:rippleColor="@color/magenta"
+        app:backgroundTint="@color/purple"
+        app:elevation="6dp"
+        app:borderWidth="0dp"
+        android:layout_margin="10dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/add_line_button"
+        android:src="@mipmap/ic_playlist_add_white_48dp"
+        app:rippleColor="@color/magenta"
+        app:backgroundTint="@color/purple"
+        app:elevation="6dp"
+        app:borderWidth="0dp"
+        android:layout_margin="10dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/add_line_button"
+        android:layout_toStartOf="@+id/add_line_button"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/character_button"
+        android:src="@mipmap/ic_people_white_48dp"
+        app:rippleColor="@color/magenta"
+        app:backgroundTint="@color/purple"
+        app:elevation="6dp"
+        app:borderWidth="0dp"
+        android:layout_margin="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:padding="5dp"
+        android:id="@+id/action_line_layout"
+        android:visibility="invisible"
+        android:background="@color/transparent_blue">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/action_edit"
+            android:background="@drawable/rounded_white"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_centerVertical="true"
+            android:minHeight="200dp"
+            android:maxHeight="400dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/action_edit"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/cancel_action_button"
+            android:src="@mipmap/ic_close_white_48dp"
+            app:rippleColor="@color/magenta"
+            app:backgroundTint="@color/purple"
+            app:elevation="6dp"
+            app:borderWidth="0dp"
+            android:layout_margin="10dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/action_edit"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/save_action_button"
+            android:src="@mipmap/ic_check_white_48dp"
+            app:rippleColor="@color/magenta"
+            app:backgroundTint="@color/purple"
+            app:elevation="6dp"
+            app:borderWidth="0dp"
+            android:layout_margin="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:padding="5dp"
+        android:id="@+id/dialogue_line_layout"
+        android:visibility="invisible"
+        android:background="@color/transparent_blue">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_blue"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:id="@+id/dialogue_speaker"
+            android:layout_above="@+id/dialogue_edit"
+            android:text="Character Name"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dialogue_edit"
+            android:background="@drawable/rounded_white"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_centerVertical="true"
+            android:minHeight="200dp"
+            android:maxHeight="400dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dialogue_edit"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/cancel_dialogue_button"
+            android:src="@mipmap/ic_close_white_48dp"
+            app:rippleColor="@color/magenta"
+            app:backgroundTint="@color/purple"
+            app:elevation="6dp"
+            app:borderWidth="0dp"
+            android:layout_margin="10dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialogue_edit"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/save_dialogue_button"
+            android:src="@mipmap/ic_check_white_48dp"
+            app:rippleColor="@color/magenta"
+            app:backgroundTint="@color/purple"
+            app:elevation="6dp"
+            app:borderWidth="0dp"
+            android:layout_margin="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:padding="5dp"
+        android:id="@+id/lyric_line_layout"
+        android:visibility="invisible"
+        android:background="@color/transparent_blue">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lyric_edit"
+            android:background="@drawable/rounded_white"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_centerVertical="true"
+            android:minHeight="200dp"
+            android:maxHeight="400dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lyric_edit"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/cancel_lyric_button"
+            android:src="@mipmap/ic_close_white_48dp"
+            app:rippleColor="@color/magenta"
+            app:backgroundTint="@color/purple"
+            app:elevation="6dp"
+            app:borderWidth="0dp"
+            android:layout_margin="10dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lyric_edit"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/save_lyric_button"
+            android:src="@mipmap/ic_check_white_48dp"
+            app:rippleColor="@color/magenta"
+            app:backgroundTint="@color/purple"
+            app:elevation="6dp"
+            app:borderWidth="0dp"
+            android:layout_margin="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:padding="5dp"
+        android:id="@+id/transition_line_layout"
+        android:visibility="invisible"
+        android:background="@color/transparent_blue">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/transition_edit"
+            android:background="@drawable/rounded_white"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_centerVertical="true"
+            android:minHeight="200dp"
+            android:maxHeight="400dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transition_edit"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/cancel_transition_button"
+            android:src="@mipmap/ic_close_white_48dp"
+            app:rippleColor="@color/magenta"
+            app:backgroundTint="@color/purple"
+            app:elevation="6dp"
+            app:borderWidth="0dp"
+            android:layout_margin="10dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transition_edit"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/save_transition_button"
+            android:src="@mipmap/ic_check_white_48dp"
+            app:rippleColor="@color/magenta"
+            app:backgroundTint="@color/purple"
+            app:elevation="6dp"
+            app:borderWidth="0dp"
+            android:layout_margin="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:padding="5dp"
+        android:id="@+id/line_select_layout"
+        android:visibility="invisible"
+        android:gravity="center_vertical"
+        android:background="@color/transparent_blue">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="36dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/pick_dialogue_button"
+            android:elevation="8dp"
+            android:textColor="@color/white"
+            android:text="Dialogue"
+            android:gravity="center"
+            android:background="@drawable/text_button"
+            android:layout_margin="10dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="36dp"
+            android:layout_below="@+id/pick_dialogue_button"
+            android:id="@+id/pick_action_button"
+            android:elevation="8dp"
+            android:textColor="@color/white"
+            android:text="Action Line"
+            android:gravity="center"
+            android:background="@drawable/text_button"
+            android:layout_margin="10dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="36dp"
+            android:layout_below="@+id/pick_action_button"
+            android:id="@+id/pick_transition_button"
+            android:elevation="8dp"
+            android:textColor="@color/white"
+            android:text="Transition"
+            android:gravity="center"
+            android:background="@drawable/text_button"
+            android:layout_margin="10dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="36dp"
+            android:layout_below="@+id/pick_transition_button"
+            android:id="@+id/pick_lyric_button"
+            android:elevation="8dp"
+            android:textColor="@color/white"
+            android:text="Lyrics"
+            android:gravity="center"
+            android:background="@drawable/text_button"
+            android:layout_margin="10dp" />
+    </RelativeLayout>
+</RelativeLayout>

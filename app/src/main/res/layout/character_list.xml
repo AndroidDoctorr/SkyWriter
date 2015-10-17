@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:background="@drawable/rounded_blue">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:text="Characters"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:id="@+id/char_title"
+        android:layout_margin="5dp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/char_title"
+        android:layout_above="@+id/add_character_button"
+        android:id="@+id/char_list"
+        android:layout_margin="5dp"
+        android:background="@drawable/rounded_white"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/add_character_button"
+        android:src="@mipmap/ic_person_add_white_48dp"
+        app:rippleColor="@color/magenta"
+        app:backgroundTint="@color/purple"
+        app:elevation="6dp"
+        app:borderWidth="0dp"
+        android:layout_margin="10dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/cancel_button"
+        android:src="@mipmap/ic_backspace_white_48dp"
+        app:rippleColor="@color/magenta"
+        app:backgroundTint="@color/purple"
+        app:elevation="6dp"
+        app:borderWidth="0dp"
+        android:layout_margin="10dp" />
+</RelativeLayout>
