@@ -2,6 +2,8 @@ package com.andrewtorr.skywriter;
 
 import android.app.Application;
 
+import com.andrewtorr.skywriter.Models.Char;
+import com.andrewtorr.skywriter.Models.Scene;
 import com.andrewtorr.skywriter.Models.Script;
 import com.parse.Parse;
 import com.parse.ParseACL;
@@ -13,6 +15,8 @@ public class SkyWriterApplication extends Application {
     public void onCreate() {
         super.onCreate();
         ParseObject.registerSubclass(Script.class);
+        ParseObject.registerSubclass(Scene.class);
+        ParseObject.registerSubclass(Char.class);
 
         Parse.initialize(this, "YQfgN2AowF3HwBFUYmWJW2LMzs5CaI916Erv2A2s", "j3b5UfhkzMaHzmcMzujKZwg5U7SDwDq0efbPHpis");
 
